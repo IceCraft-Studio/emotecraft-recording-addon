@@ -33,16 +33,16 @@ dependencies {
     modImplementation("net.fabricmc.fabric-api:fabric-api:${project.properties["fabric_version"]}")
     modImplementation("net.fabricmc:fabric-language-kotlin:${project.properties["fabric_kotlin"]}")
 
-    modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.properties["player_anim"]}")
+    modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.properties["player_anim_version"]}")
 
-    modLocalRuntime("com.terraformersmc:modmenu:${project.properties["mod_menu"]}")
-    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.properties["cloth_config"]}") {
+    modLocalRuntime("com.terraformersmc:modmenu:${project.properties["mod_menu_version"]}")
+    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.properties["cloth_config_version"]}") {
         exclude(group = "net.fabricmc.fabric-api")
     }
-    modCompileOnly("io.github.kosmx.emotes:emotesMain:${project.properties["emotecraft"]}")
+    modCompileOnly("io.github.kosmx.emotes:emotesMain:${project.properties["emotecraft_version"]}")
 
-    modImplementation("maven.modrinth:emotecraft:${project.properties["emotecraft"]}+1.21.1-fabric")
-    modImplementation("maven.modrinth:flashback:${project.properties["flashback"]}")
+    modImplementation("maven.modrinth:emotecraft:${project.properties["emotecraft_version"]}+${project.properties["minecraft_version"]}-fabric")
+    modImplementation("maven.modrinth:flashback:${project.properties["flashback_version"]}")
 
 }
 
