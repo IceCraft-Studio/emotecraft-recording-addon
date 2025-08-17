@@ -1,37 +1,30 @@
 {
-  "schemaVersion": 1,
-  "id": "emotecraft-flashback-addon",
-  "version": "1.0",
-  "name": "Emotecraft Flashback Addon",
-  "description": "Emotecraft and Flashback compatibility layer",
-  "authors": [
-    "KosmX",
-    "ClaimGaming",
-    "PavelDobCZ23"
-  ],
-  "contributors": [
-    "TheMeko"
-  ],
-  "contact": {
-    "issues": "https://github.com/icecraft-studio/emotecraft-flashback-addon/issues"
-  },
-  "icon": "emotecraft_flashback_addon_logo.png",
-  "license": "MIT",
-  "environment": "*",
-  "entrypoints": {
-    "client": [
-      {
-        "adapter": "kotlin",
-        "value": "dev.kosmx.emotesCompatFlashback.rp.ClientInitKt::initializeClient"
-      }
-    ]
-  },
-  "depends": {
-    "fabricloader": ">=0.16",
-    "fabric": "*",
-    "fabric-language-kotlin": ">=1.12.3+kotlin.2.0",
-    "emotecraft": ">=2.4.6",
-    "flashback": ">=0.15.0",
-    "minecraft": ">=1.21"
-  }
+	"schemaVersion": 1,
+	"id": "emotecraft-flashback-addon",
+	"version": "${version}",
+	"name": "Emotecraft Flashback Addon",
+	"description": "Emotecraft and Flashback compatibility layer.",
+	"authors": [
+		"PavelDobCZ23"
+	],
+	"contact": {
+		"issues": "https://github.com/icecraft-studio/emotecraft-flashback-addon/issues"
+	},
+	"license": "GPL-3.0-or-later",
+	"icon": "assets/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"studio.icecraft.flashbackemotescompat.EmotecraftFlashbackAddonClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.7",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*",
+		"emotecraft": ">=2.4.6",
+		"flashback": ">=0.15.0"
+	}
 }
