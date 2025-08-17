@@ -20,10 +20,9 @@
 	},
 	"depends": {
 		"fabricloader": ">=0.17.2",
-		"minecraft": "~1.21.7",
+		"minecraft": ">=1.21.7",
 		"java": ">=21",
 		"fabric-api": "*",
-		"fabric-language-kotlin": "*",
 		"emotecraft": ">=2.4.6",
 		"flashback": ">=0.15.0"
 	}
