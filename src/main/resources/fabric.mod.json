@@ -8,7 +8,8 @@
 		"PavelDobCZ23"
 	],
 	"contact": {
-		"issues": "https://github.com/icecraft-studio/emotecraft-flashback-addon/issues"
+		"homepage": "https://icecraft.studio",
+		"issues": "https://github.com/paveldobcz23/emotecraft-flashback-addon/issues"
 	},
 	"license": "GPL-3.0-or-later",
 	"icon": "assets/icon.png",
@@ -23,7 +24,7 @@
 		"minecraft": ">=1.21.7",
 		"java": ">=21",
 		"fabric-api": "*",
-		"emotecraft": ">=2.4.6",
-		"flashback": ">=0.15.0"
+		"emotecraft": ">=3.0.0-a.build.106",
+		"flashback": ">=0.35.2"
 	}
 }
