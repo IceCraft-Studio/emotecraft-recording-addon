@@ -1,22 +1,22 @@
 {
 	"schemaVersion": 1,
-	"id": "emotecraft-flashback-addon",
+	"id": "emotecraft-recording-addon",
 	"version": "${version}",
-	"name": "Emotecraft Flashback Addon",
-	"description": "Emotecraft and Flashback compatibility layer.",
+	"name": "Emotecraft Recording Addon",
+	"description": "Allows you to record Emotecraft emotes with Flashback or Replay Mod.",
 	"authors": [
 		"PavelDobCZ23"
 	],
 	"contact": {
 		"homepage": "https://icecraft.studio",
-		"issues": "https://github.com/paveldobcz23/emotecraft-flashback-addon/issues"
+		"issues": "https://github.com/icecraft-studio/emotecraft-recording-addon/issues"
 	},
 	"license": "GPL-3.0-or-later",
 	"icon": "assets/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"client": [
-			"studio.icecraft.flashbackemotescompat.EmotecraftFlashbackAddonClient"
+			"studio.icecraft.emotecraftrecording.EmotecraftRecordingInit"
 		]
 	},
 	"depends": {
@@ -24,7 +24,10 @@
 		"minecraft": ">=1.21.7",
 		"java": ">=21",
 		"fabric-api": "*",
-		"emotecraft": ">=3.0.0-a.build.106",
+		"emotecraft": ">=3.0.0-b.build.121"
+	},
+	"recommends": {
+		"replaymod": ">=1.21.7-2.6.23",
 		"flashback": ">=0.35.2"
 	}
 }

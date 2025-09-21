@@ -11,11 +11,6 @@ base {
 }
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
 	mavenLocal()
 	mavenCentral()
  	maven {
@@ -42,18 +37,6 @@ repositories {
 	}
 }
 
-loom {
-	splitEnvironmentSourceSets()
-
-	mods {
-		"emotecraft-flashback-addon" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-
-}
-
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -62,14 +45,15 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
+
 	// Mod Dependencies
-    modLocalRuntime("com.terraformersmc:modmenu:${project.mod_menu_version}")
+	modLocalRuntime("com.terraformersmc:modmenu:${project.mod_menu_version}")
     modCompileOnly("io.github.kosmx.emotes:emotesFabric:${project.emotecraft_version}")
 
-    modImplementation("com.zigythebird.playeranim:PlayerAnimationLibFabric:${project.player_anim_version}")
-    modImplementation("maven.modrinth:emotecraft:${project.emotecraft_version}+${project.minecraft_version}-fabric")
-    modImplementation("maven.modrinth:flashback:${project.flashback_version}")
+	modImplementation("com.zigythebird.playeranim:PlayerAnimationLibFabric:${project.player_anim_version}+mc${project.minecraft_version}")
+	modImplementation("maven.modrinth:emotecraft:${project.emotecraft_version}+${project.minecraft_version}-fabric")
+	modImplementation("maven.modrinth:flashback:${project.flashback_version}")
+	modImplementation("maven.modrinth:replaymod:${project.minecraft_version}-${project.replaymod_version}")
 }
 
 processResources {
