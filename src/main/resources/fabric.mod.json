@@ -24,7 +24,7 @@
 		"minecraft": ">=1.21.7",
 		"java": ">=21",
 		"fabric-api": "*",
-		"emotecraft": ">=3.0.0-b.build.121"
+		"emotecraft": ">=3.0.0-b.build.122"
 	},
 	"recommends": {
 		"replaymod": ">=1.21.7-2.6.23",

@@ -11,10 +11,8 @@ public class EmotecraftReplayAddonClient {
 		if (ReplayModRecording.instance == null)
 			return;
 		try {
-			EmotecraftRecordingInit.log.info("Emote packet record attempt for Replay Mod.");
 			ReplayModRecording.instance.getConnectionEventHandler().getPacketListener().save(
 					NetworkPlatformTools.playPacket(builder.build().write()));
-			EmotecraftRecordingInit.log.info("Recorded.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

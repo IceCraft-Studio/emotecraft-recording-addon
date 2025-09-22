@@ -13,11 +13,9 @@ public class EmotecraftFlashbackAddonClient {
 		if (Flashback.RECORDER == null)
 			return;
 		try {
-			EmotecraftRecordingInit.log.info("Emote packet record attempt for Flashback.");
 			Flashback.RECORDER.writePacketAsync(
 					NetworkPlatformTools.playPacket(builder.build().write()),
 					ConnectionProtocol.PLAY);
-			EmotecraftRecordingInit.log.info("Recorded.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
