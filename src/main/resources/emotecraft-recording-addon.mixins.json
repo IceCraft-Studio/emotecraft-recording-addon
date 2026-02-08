@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "studio.icecraft.emotecraftrecording.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EmotePacketMixin",
+    "SongPacketMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
