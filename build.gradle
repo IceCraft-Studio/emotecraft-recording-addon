@@ -73,7 +73,7 @@ dependencies {
     compileOnly("io.github.kosmx.emotes:emotesFabric:${project.emotecraft_version}")
 
 	implementation("com.zigythebird.playeranim:PlayerAnimationLibFabric:${project.player_anim_version}+mc.${project.player_anim_mc_version}")
-	implementation("maven.modrinth:emotecraft:${project.emotecraft_version}+${project.emotecraft_mc_version}-fabricneo")
+	implementation("maven.modrinth:emotecraft:${project.emotecraft_version}")
 	implementation("maven.modrinth:flashback:${project.flashback_version}-fabric,${project.flashback_mc_version}")
 	implementation("maven.modrinth:replaymod:${project.replaymod_mc_version}-${project.replaymod_version}")
 }
