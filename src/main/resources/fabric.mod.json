@@ -24,13 +24,13 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.19.2",
-		"minecraft": ">=26.1",
+		"minecraft": ">=26.2",
 		"java": ">=25",
 		"fabric-api": "*",
-		"emotecraft": ">=3.3.0-a.build.148"
+		"emotecraft": "3.4.0-b.build.*"
 	},
 	"recommends": {
-		"replaymod": ">=1.21.11-2.6.26",
-		"flashback": ">=0.39"
+		"replaymod": ">=26.2-2.6.27",
+		"flashback": ">=0.41.1"
 	}
 }
