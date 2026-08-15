@@ -1,5 +1,5 @@
 plugins {
-	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
 	id 'maven-publish'
 }
 
@@ -62,20 +62,20 @@ loom {
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings loom.officialMojangMappings()
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	//mappings loom.officialMojangMappings()
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 	// Mod Dependencies
-	modLocalRuntime("com.terraformersmc:modmenu:${project.mod_menu_version}")
-    modCompileOnly("io.github.kosmx.emotes:emotesFabric:${project.emotecraft_version}")
+	implementation("com.terraformersmc:modmenu:${project.mod_menu_version}")
+    compileOnly("io.github.kosmx.emotes:emotesFabric:${project.emotecraft_version}")
 
-	modImplementation("com.zigythebird.playeranim:PlayerAnimationLibFabric:${project.player_anim_version}+mc.${project.player_anim_mc_version}")
-	modImplementation("maven.modrinth:emotecraft:${project.emotecraft_version}+${project.emotecraft_mc_version}-fabric")
-	modImplementation("maven.modrinth:flashback:${project.flashback_version}")
-	modImplementation("maven.modrinth:replaymod:${project.replaymod_mc_version}-${project.replaymod_version}")
+	implementation("com.zigythebird.playeranim:PlayerAnimationLibFabric:${project.player_anim_version}+mc.${project.player_anim_mc_version}")
+	implementation("maven.modrinth:emotecraft:${project.emotecraft_version}+${project.emotecraft_mc_version}-fabricneo")
+	implementation("maven.modrinth:flashback:${project.flashback_version}-fabric,${project.flashback_mc_version}")
+	implementation("maven.modrinth:replaymod:${project.replaymod_mc_version}-${project.replaymod_version}")
 }
 
 processResources {
@@ -87,14 +87,14 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 21
+	it.options.release = 25
 }
 
 java {
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_21
-	targetCompatibility = JavaVersion.VERSION_21
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
 }
 
 jar {
